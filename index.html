@@ -26,6 +26,7 @@
             <a href="#rewards">yuu Rewards</a>
             <a href="#faq">FAQ</a>
             <a onclick="showPopup()">Login</a>
+            <a onclick="showSignUpPopup()">Sign Up</a>
         </div>
     </nav>
     <div class="banner">
@@ -38,6 +39,13 @@
         <input type="text" placeholder="Enter your username">
         <button onclick="hidePopup()">Login</button>
     </div>
+
+    <!-- Sign Up Popup -->
+<div class="popup" id="signUpPopup">
+    <h2>Enter Verification Code</h2>
+    <input type="text" placeholder="Enter verification code">
+    <button onclick="nextStep()">Next</button>
+</div>
 
     <script src="scripts.js"></script>
 </body>
