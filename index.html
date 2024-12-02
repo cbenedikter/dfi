@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "cf532c5e-5be2-4b00-ab6d-3d3d72ca9124",
+    });
+  });
+</script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://www.yuurewards.com/themes/custom/anfield/js/assets/images/logo/nav_bar_logo.png" alt="Logo">
+        </div>
+        <div class="menu">
+            <a href="#partners">yuu Partners</a>
+            <a href="#insure">yuu Insure</a>
+            <a href="#rewards">yuu Rewards</a>
+            <a href="#faq">FAQ</a>
+            <a onclick="showPopup()">Login</a>
+        </div>
+    </nav>
+    <div class="banner">
+        <img src="https://www.yuurewards.com/themes/custom/anfield/js/assets/images/home_rewards/member_kv.png" alt="Banner">
+    </div>
+
+    <!-- Pop-up Login -->
+    <div class="popup" id="popup">
+        <h2>Login</h2>
+        <input type="text" placeholder="Enter your username">
+        <button onclick="hidePopup()">Login</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
