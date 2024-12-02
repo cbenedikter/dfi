@@ -22,3 +22,7 @@ function hidePopup() {
     // Hide the pop-up after login attempt
     document.getElementById('popup').style.display = 'none';
 }
+// Show the Sign Up pop-up
+function showSignUpPopup() {
+    document.getElementById('signUpPopup').style.display = 'block';
+}
