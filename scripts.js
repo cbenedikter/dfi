@@ -5,16 +5,20 @@ function showPopup() {
 
 // Hide the login pop-up and call OneSignal login method
 function hidePopup() {
-    // Get the external_id value (the text entered in the input field)
-    var externalId = document.querySelector('.popup input').value;
+    // Get the value from the input field (ensure it's a string)
+    var externalId = document.querySelector('.popup input').value.trim();
 
-    // Call the OneSignal login method with external_id
-    if (window.OneSignal) {
-        window.OneSignal.push(function() {
-            OneSignal.login({ external_id: externalId });
-        });
+    // Check if externalId is not empty before calling OneSignal.login
+    if (externalId) {
+        if (window.OneSignal) {
+            window.OneSignalDeferred.push(async function(OneSignal) {
+                await OneSignal.login(externalId); // Pass the externalId directly
+            });
+        }
+    } else {
+        console.error("External ID is empty.");
     }
 
-    // Hide the pop-up after login
+    // Hide the pop-up after login attempt
     document.getElementById('popup').style.display = 'none';
 }
