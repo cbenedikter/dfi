@@ -1,0 +1,102 @@
+/* General body styling */
+body {
+    margin: 0;
+    background-color: #2A7DE1;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2A7DE1;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Logo styling */
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+/* Navigation menu styling */
+.menu {
+    display: flex;
+    gap: 18px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Banner styling */
+.banner {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+
+/* Pop-up styling */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-color: rgba(42, 125, 225, 0.5); /* 50% transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.popup input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.popup button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    color: #2A7DE1;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #e0e0e0;
+}
