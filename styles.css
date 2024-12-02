@@ -100,3 +100,32 @@ nav {
 .popup button:hover {
     background-color: #e0e0e0;
 }
+
+/* Carousel Section */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hide overflowing images */
+    margin-top: -20px;
+}
+
+.carousel {
+    display: flex;
+    animation: slide 30s linear infinite; /* Adjusted to allow for smoother repeat */
+}
+
+.carousel img {
+    max-width: 100%; /* Adjust size of the images */
+    margin-right: 150px; /* Increased margin between images */
+}
+
+/* Keyframes for sliding effect */
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
