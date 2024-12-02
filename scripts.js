@@ -26,3 +26,31 @@ function hidePopup() {
 function showSignUpPopup() {
     document.getElementById('signUpPopup').style.display = 'block';
 }
+
+// Handle the Next button click in the Sign Up pop-up
+function nextStep() {
+    // Get the verification code entered
+    var verificationCode = document.querySelector('#signUpPopup input').value.trim();
+
+    // Capture the time when the "Next" button is clicked as a UNIX timestamp
+    var currentTime = new Date().getTime(); // UNIX timestamp in milliseconds
+
+    if (verificationCode) {
+        console.log("Verification code entered: " + verificationCode);
+
+        // Send tags to OneSignal
+        if (window.OneSignal) {
+            window.OneSignal.push(function() {
+                OneSignal.User.addTags({
+                    invitationCode: verificationCode, // The code entered
+                    invitationTime: currentTime        // The UNIX timestamp of the click
+                });
+            });
+        }
+    } else {
+        console.error("Verification code is empty.");
+    }
+
+    // Hide the pop-up after the action
+    document.getElementById('signUpPopup').style.display = 'none';
+}
