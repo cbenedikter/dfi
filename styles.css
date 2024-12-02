@@ -13,7 +13,7 @@ nav {
     background-color: #2A7DE1;
     padding: 10px 20px;
     position: relative;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 /* Logo styling */
@@ -36,7 +36,7 @@ nav {
 .menu a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     cursor: pointer;
 }
