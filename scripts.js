@@ -54,3 +54,18 @@ function nextStep() {
     // Hide the pop-up after the action
     document.getElementById('signUpPopup').style.display = 'none';
 }
+
+// Close pop-up if clicked outside of the pop-up
+window.addEventListener('click', function(event) {
+    var loginPopup = document.getElementById('popup');
+    var signUpPopup = document.getElementById('signUpPopup');
+
+    if (event.target === loginPopup || event.target === signUpPopup) {
+        return; // Prevent closing if the click is inside the pop-up
+    }
+
+    // Close the pop-ups if click is outside
+    loginPopup.style.display = 'none';
+    signUpPopup.style.display = 'none';
+});
+
